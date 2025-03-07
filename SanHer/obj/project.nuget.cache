@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2KtCxtPwkkc=",
+  "dgSpecHash": "c05YxLoUYNc=",
   "success": true,
-  "projectFilePath": "D:\\Desarrollos\\ASP.NET\\SanHer\\SanHer\\SanHer.csproj",
+  "projectFilePath": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\SanHer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mayo\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Mayo\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

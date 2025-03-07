@@ -7971,11 +7971,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desarrollos\\ASP.NET\\SanHer\\SanHer\\SanHer.csproj",
+      "projectUniqueName": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\SanHer.csproj",
       "projectName": "SanHer",
-      "projectPath": "D:\\Desarrollos\\ASP.NET\\SanHer\\SanHer\\SanHer.csproj",
+      "projectPath": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\SanHer.csproj",
       "packagesPath": "C:\\Users\\Mayo\\.nuget\\packages\\",
-      "outputPath": "D:\\Desarrollos\\ASP.NET\\SanHer\\SanHer\\obj\\",
+      "outputPath": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\IDEs\\sdk\\NuGetPackages"

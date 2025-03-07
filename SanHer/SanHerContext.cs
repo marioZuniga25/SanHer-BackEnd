@@ -49,7 +49,7 @@ namespace SanHer
 
             modelBuilder.Entity<Horario>(horario =>
             {
-                horario.ToTable("Cita");
+                horario.ToTable("Horario");
                 horario.HasKey(c => c.Id);
                 horario.Property(c => c.Id).ValueGeneratedOnAdd().UseIdentityColumn();
                 horario.Property(c => c.IdContador).IsRequired();
@@ -62,7 +62,7 @@ namespace SanHer
 
             modelBuilder.Entity<DiaNoLaborable>(dnl=>
             {
-                dnl.ToTable("Cita");
+                dnl.ToTable("DiaNoLaborable");
                 dnl.HasKey(c => c.Id);
                 dnl.Property(c => c.Id).ValueGeneratedOnAdd().UseIdentityColumn();
                 dnl.Property(c => c.Fecha).IsRequired();
