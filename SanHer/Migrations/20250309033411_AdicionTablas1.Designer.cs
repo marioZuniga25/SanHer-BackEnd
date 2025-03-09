@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SanHer;
 
@@ -11,9 +12,11 @@ using SanHer;
 namespace SanHer.Migrations
 {
     [DbContext(typeof(SanHerContext))]
-    partial class SanHerContextModelSnapshot : ModelSnapshot
+    [Migration("20250309033411_AdicionTablas1")]
+    partial class AdicionTablas1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

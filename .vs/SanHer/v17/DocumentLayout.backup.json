@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\sanhercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\sanhercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\controllers\\citascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\controllers\\citascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\models\\dianolaborable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\models\\dianolaborable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\models\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\models\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Migrations\\20250309033411_AdicionTablas1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SanHer\\Migrations\\20250309033411_AdicionTablas1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\controllers\\horarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\controllers\\horarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\models\\dianolaborable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\models\\dianolaborable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\sanhercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|solutionrelative:sanher\\sanhercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C59BE728-76E5-4A6F-BE19-A79154330119}|SanHer\\SanHer.csproj|d:\\desarrollos\\asp.net\\sanher-backend\\sanher\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,24 +50,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250309033411_AdicionTablas1.cs",
+              "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Migrations\\20250309033411_AdicionTablas1.cs",
+              "RelativeDocumentMoniker": "SanHer\\Migrations\\20250309033411_AdicionTablas1.cs",
+              "ToolTip": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Migrations\\20250309033411_AdicionTablas1.cs",
+              "RelativeToolTip": "SanHer\\Migrations\\20250309033411_AdicionTablas1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T03:34:12.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HorariosController.cs",
+              "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Controllers\\HorariosController.cs",
+              "RelativeDocumentMoniker": "SanHer\\Controllers\\HorariosController.cs",
+              "ToolTip": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Controllers\\HorariosController.cs",
+              "RelativeToolTip": "SanHer\\Controllers\\HorariosController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T03:33:19.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CitasController.cs",
+              "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Controllers\\CitasController.cs",
+              "RelativeDocumentMoniker": "SanHer\\Controllers\\CitasController.cs",
+              "ToolTip": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Controllers\\CitasController.cs",
+              "RelativeToolTip": "SanHer\\Controllers\\CitasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T03:20:16.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SanHerContext.cs",
               "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\SanHerContext.cs",
               "RelativeDocumentMoniker": "SanHer\\SanHerContext.cs",
               "ToolTip": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\SanHerContext.cs",
               "RelativeToolTip": "SanHer\\SanHerContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T21:09:44.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "DiaNoLaborable.cs",
               "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Models\\DiaNoLaborable.cs",
               "RelativeDocumentMoniker": "SanHer\\Models\\DiaNoLaborable.cs",
@@ -63,11 +114,12 @@
               "RelativeToolTip": "SanHer\\Models\\DiaNoLaborable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T21:06:42.866Z"
+              "WhenOpened": "2025-03-07T21:06:42.866Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "SanHer\\Models\\Usuario.cs",
@@ -85,25 +137,27 @@
               "RelativeDocumentMoniker": "SanHer\\Models\\Horario.cs",
               "ToolTip": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Models\\Horario.cs",
               "RelativeToolTip": "SanHer\\Models\\Horario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T20:54:05.945Z"
+              "WhenOpened": "2025-03-07T20:54:05.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Cita.cs",
               "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Models\\Cita.cs",
               "RelativeDocumentMoniker": "SanHer\\Models\\Cita.cs",
               "ToolTip": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Models\\Cita.cs",
               "RelativeToolTip": "SanHer\\Models\\Cita.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T20:48:38.852Z"
+              "WhenOpened": "2025-03-07T20:48:38.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\appsettings.json",
               "RelativeDocumentMoniker": "SanHer\\appsettings.json",
@@ -115,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "D:\\Desarrollos\\ASP.NET\\SanHer-BackEnd\\SanHer\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "SanHer\\Controllers\\UsuariosController.cs",

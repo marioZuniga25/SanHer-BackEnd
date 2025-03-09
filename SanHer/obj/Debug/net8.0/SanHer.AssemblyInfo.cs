@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SanHer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e88b7fa8173a03e95fb30756c45f16080dbb8ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28803f5e0697b76016a0d0c40b9467a59192bd09")]
 [assembly: System.Reflection.AssemblyProductAttribute("SanHer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SanHer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
