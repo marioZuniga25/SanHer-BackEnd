@@ -30,24 +30,60 @@ namespace SanHer.Controllers
 
         // Agendar una cita
         [HttpPost]
-        public async Task<IActionResult> AgendarCita([FromBody] Cita cita)
+        public async Task<IActionResult> AgendarCita([FromBody] CitaAuxiliar citaAuxiliar)
         {
-            if (EsDiaNoLaborable(cita.Fecha))
+            if (EsDiaNoLaborable(citaAuxiliar.Fecha))
             {
                 return BadRequest("No se pueden agendar citas en días no laborables.");
             }
 
-            var horario = await _context.Horarios
-                .FirstOrDefaultAsync(h => h.Id == cita.Horario);
+            // Obtener todos los horarios que coinciden con el rango de horario seleccionado
+            var horariosDisponibles = await _context.Horarios
+                .Where(h => h.HoraInicio == citaAuxiliar.HoraInicio && h.HoraFin == citaAuxiliar.HoraFin)
+                .ToListAsync();
 
-            if (horario == null)
+            if (horariosDisponibles == null || !horariosDisponibles.Any())
             {
                 return BadRequest("Horario no válido.");
             }
 
-            cita.Estatus = 1; // Establecer el estatus de la cita, por ejemplo, "agendada"
+            // Buscar un contador disponible para el horario seleccionado
+            int? contadorAsignado = null;
+            int? horarioAsignado = null;
+            foreach (var horario in horariosDisponibles)
+            {
+                bool contadorOcupado = await _context.Citas
+                    .AnyAsync(c => c.Fecha == citaAuxiliar.Fecha && c.Horario == horario.Id && c.IdContadorAsignado == horario.IdContador);
+
+                if (!contadorOcupado)
+                {
+                    contadorAsignado = horario.IdContador;
+                    horarioAsignado = horario.Id; // Asignar el ID del horario seleccionado
+                    break; // Asignar el primer contador disponible
+                }
+            }
+
+            if (contadorAsignado == null || horarioAsignado == null)
+            {
+                return BadRequest("No hay contadores disponibles para este horario.");
+            }
+
+            // Crear la cita con los datos completos
+            var cita = new Cita
+            {
+                IdUsuario = citaAuxiliar.IdUsuario,
+                Fecha = citaAuxiliar.Fecha,
+                Horario = horarioAsignado.Value,
+                Telefono = citaAuxiliar.Telefono,
+                Estatus = citaAuxiliar.Estatus,
+                IdContadorAsignado = contadorAsignado.Value,
+                Asunto = citaAuxiliar.Asunto
+            };
+
+            // Guardar la cita en la base de datos
             _context.Citas.Add(cita);
             await _context.SaveChangesAsync();
+
             return Ok(cita);
         }
 
@@ -78,4 +114,16 @@ namespace SanHer.Controllers
             return _context.DiasNoLaborables.Any(d => d.Fecha == dia) || dia.DayOfWeek == DayOfWeek.Saturday || dia.DayOfWeek == DayOfWeek.Sunday;
         }
     }
+    
+        public class CitaAuxiliar
+        {
+            public int IdUsuario { get; set; }
+            public DateOnly Fecha { get; set; }
+            public string HoraInicio { get; set; }
+            public string HoraFin { get; set; }
+            public string Telefono { get; set; }
+            public int Estatus { get; set; } = 1;
+            public string Asunto { get; set; }
+        }
+    
 }

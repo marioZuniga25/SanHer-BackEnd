@@ -77,7 +77,8 @@ namespace SanHer.Controllers
                 nombre = usuario.Nombre,
                 correo = usuario.Correo,
                 apellido1 = usuario.Apellido1,
-                apellido2 = usuario.Apellido2
+                apellido2 = usuario.Apellido2,
+                idUsuario = usuario.Id
             });
         }
 

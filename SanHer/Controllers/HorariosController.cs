@@ -21,88 +21,51 @@ namespace SanHer.Controllers
             _context = context;
         }
 
-        // GET: api/Horarios
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Horario>>> GetHorarios()
+        // GET: api/Horarios/disponibles?dia=1&fecha=2023-10-02
+        [HttpGet("disponibles")]
+        public async Task<ActionResult<IEnumerable<object>>> GetHorariosDisponibles([FromQuery] int dia, [FromQuery] string fecha)
         {
-            return await _context.Horarios.ToListAsync();
-        }
+            // Convertir el número del día al nombre del día en español
+            string nombreDia = ObtenerNombreDia(dia);
 
-        // GET: api/Horarios/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Horario>> GetHorario(int id)
-        {
-            var horario = await _context.Horarios.FindAsync(id);
+            // Convertir la fecha a DateOnly
+            var fechaCita = DateOnly.Parse(fecha);
 
-            if (horario == null)
-            {
-                return NotFound();
-            }
+            // Obtener todos los horarios para el día seleccionado
+            var horarios = await _context.Horarios
+                .Where(h => h.DiaSemana == nombreDia)
+                .ToListAsync();
 
-            return horario;
-        }
+            // Obtener las citas agendadas para la fecha seleccionada
+            var citasAgendadas = await _context.Citas
+                .Where(c => c.Fecha == fechaCita)
+                .ToListAsync();
 
-        // PUT: api/Horarios/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutHorario(int id, Horario horario)
-        {
-            if (id != horario.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(horario).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!HorarioExists(id))
+            // Filtrar horarios disponibles
+            var horariosDisponibles = horarios
+                .GroupBy(h => new { h.HoraInicio, h.HoraFin })
+                .Select(g => new
                 {
-                    return NotFound();
-                }
-                else
+                    HoraInicio = g.Key.HoraInicio,
+                    HoraFin = g.Key.HoraFin,
+                    ContadoresDisponibles = g.Where(h => !citasAgendadas.Any(c => c.Horario == h.Id && c.IdContadorAsignado == h.IdContador))
+                })
+                .Where(g => g.ContadoresDisponibles.Any()) // Solo horarios con contadores disponibles
+                .Select(g => new
                 {
-                    throw;
-                }
-            }
+                    HoraInicio = g.HoraInicio,
+                    HoraFin = g.HoraFin
+                })
+                .ToList();
 
-            return NoContent();
+            return Ok(horariosDisponibles);
         }
 
-        // POST: api/Horarios
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Horario>> PostHorario(Horario horario)
+        // Método para convertir el número del día al nombre del día en español
+        private string ObtenerNombreDia(int dia)
         {
-            _context.Horarios.Add(horario);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetHorario", new { id = horario.Id }, horario);
-        }
-
-        // DELETE: api/Horarios/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteHorario(int id)
-        {
-            var horario = await _context.Horarios.FindAsync(id);
-            if (horario == null)
-            {
-                return NotFound();
-            }
-
-            _context.Horarios.Remove(horario);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool HorarioExists(int id)
-        {
-            return _context.Horarios.Any(e => e.Id == id);
+            string[] dias = { "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" };
+            return dias[dia];
         }
     }
 }

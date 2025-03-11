@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cita",
-        "Type": "SanHer.Models.Cita",
+        "Name": "citaAuxiliar",
+        "Type": "SanHer.Controllers.CitaAuxiliar",
         "IsRequired": true
       }
     ],
@@ -53,112 +53,34 @@
   },
   {
     "ContainingType": "SanHer.Controllers.HorariosController",
-    "Method": "GetHorarios",
-    "RelativePath": "api/Horarios",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[SanHer.Models.Horario, SanHer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "SanHer.Controllers.HorariosController",
-    "Method": "PostHorario",
-    "RelativePath": "api/Horarios",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "horario",
-        "Type": "SanHer.Models.Horario",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "SanHer.Models.Horario",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "SanHer.Controllers.HorariosController",
-    "Method": "GetHorario",
-    "RelativePath": "api/Horarios/{id}",
+    "Method": "GetHorariosDisponibles",
+    "RelativePath": "api/Horarios/disponibles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "dia",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "SanHer.Models.Horario",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "SanHer.Controllers.HorariosController",
-    "Method": "PutHorario",
-    "RelativePath": "api/Horarios/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
-        "Name": "horario",
-        "Type": "SanHer.Models.Horario",
-        "IsRequired": true
+        "Name": "fecha",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SanHer.Controllers.HorariosController",
-    "Method": "DeleteHorario",
-    "RelativePath": "api/Horarios/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+    "ReturnTypes": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
     "ContainingType": "SanHer.Controllers.UsuariosController",

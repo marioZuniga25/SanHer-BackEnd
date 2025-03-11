@@ -38,11 +38,12 @@ namespace SanHer
                 cita.HasKey(c => c.Id);
                 cita.Property(c => c.Id).ValueGeneratedOnAdd().UseIdentityColumn();
                 cita.Property(c => c.Fecha).IsRequired();
-                cita.Property(c => c.telefono).IsRequired();
+                cita.Property(c => c.Telefono).IsRequired();
                 cita.Property(c => c.IdUsuario).IsRequired();
                 cita.Property(c => c.IdContadorAsignado).IsRequired();
                 cita.Property(c => c.Estatus).IsRequired();
                 cita.Property(c => c.Horario).IsRequired();
+                cita.Property(c => c.Asunto).IsRequired();
 
             });
 
@@ -54,7 +55,7 @@ namespace SanHer
                 horario.Property(c => c.Id).ValueGeneratedOnAdd().UseIdentityColumn();
                 horario.Property(c => c.IdContador).IsRequired();
                 horario.Property(c => c.DiaSemana).IsRequired();
-                horario.Property(c => c.Disponibilidad).IsRequired();
+                horario.Property(c => c.Disponibilidad);
                 horario.Property(c => c.HoraInicio).IsRequired();
                 horario.Property(c => c.HoraFin).IsRequired();
 
