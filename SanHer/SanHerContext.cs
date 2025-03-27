@@ -12,6 +12,7 @@ namespace SanHer
         public DbSet<Cita> Citas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
         public DbSet<DiaNoLaborable> DiasNoLaborables { get; set; }
+        public DbSet<Auditoria> Auditorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +28,7 @@ namespace SanHer
                 usuario.Property(u => u.Correo).IsRequired();
                 usuario.Property(u => u.Contrasenia).IsRequired();
                 usuario.Property(u => u.Rol).IsRequired();
+                usuario.Property(u => u.Estatus).IsRequired();
                 usuario.Property(u => u.FechaRegistro).IsRequired();
                 usuario.Property(u => u.UltimaConexion).IsRequired();
 
@@ -68,6 +70,18 @@ namespace SanHer
                 dnl.Property(c => c.Id).ValueGeneratedOnAdd().UseIdentityColumn();
                 dnl.Property(c => c.Fecha).IsRequired();
                 dnl.Property(c => c.Descripcion).IsRequired();
+            });
+
+            modelBuilder.Entity<Auditoria>(a =>
+            {
+                a.ToTable("Auditoria");
+                a.HasKey(a => a.Id);
+                a.Property(a => a.Id).ValueGeneratedOnAdd().UseIdentityColumn();
+                a.Property(a => a.IdUsuario).IsRequired();
+                a.Property(a=> a.Accion).IsRequired();
+                a.Property(a => a.Fecha).IsRequired();
+                a.Property(a => a.TablaAfectada).IsRequired(); 
+                a.Property(a => a.Descripcion).IsRequired();
             });
         }
     }

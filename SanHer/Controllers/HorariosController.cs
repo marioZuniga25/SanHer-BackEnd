@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SanHer;
 using SanHer.Models;
+using static SanHer.Controllers.CitasController;
 
 namespace SanHer.Controllers
 {
@@ -66,6 +67,42 @@ namespace SanHer.Controllers
         {
             string[] dias = { "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" };
             return dias[dia];
+        }
+
+
+        [HttpGet("mishorarios")]
+        public async Task<ActionResult<IEnumerable<object>>> GetHorariosContador([FromQuery] int idContador, [FromQuery] string dia)
+        {
+            var horarios = await _context.Horarios
+                .Where(h => h.DiaSemana == dia).Where(h => h.IdContador == idContador)
+                .ToListAsync();
+
+            return Ok(horarios);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AgendarCita([FromBody] Horario horario)
+        {
+            _context.Horarios.Add(horario);
+            await _context.SaveChangesAsync();
+
+            return Ok(horario);
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteHorario(int id)
+        {
+            var horario= await _context.Horarios.FindAsync(id);
+            if (horario == null)
+            {
+                return NotFound();
+            }
+
+            _context.Horarios.Remove(horario);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

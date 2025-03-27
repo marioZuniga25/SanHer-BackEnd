@@ -9,6 +9,7 @@
         public string Correo { get; set; }
         public string Contrasenia { get; set; }
         public string Rol { get; set; }
+        public int Estatus { get; set; }
         public DateTime FechaRegistro { get; set; }
         public DateTime UltimaConexion { get; set; }
     }
